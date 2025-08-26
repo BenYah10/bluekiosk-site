@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="meta.title">BlueKiosk.tech - Solution de désinfection de gourdes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="images/Logo insta.PNG" alt="BlueKiosk.tech" />
+          BlueKiosk<span>.tech</span>
+        </div>
+
+        <!-- Lang switch -->
+        <div class="lang-switch">
+          <button id="lang-fr" type="button" aria-label="Français">FR</button>
+          <button id="lang-en" type="button" aria-label="English">EN</button>
+        </div>
+
+        <button class="mobile-menu-btn" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1 class="visually-hidden" data-i18n="hero.title">Votre gourde est un nid à bactéries</h1>
+       <div class="alert-banner" role="alert" aria-live="polite">
+           <span class="alert-icon" aria-hidden="true">⚠️</span>
+           <span class="alert-text" data-i18n="hero.title">Votre gourde est un nid à bactéries</span>
+           <span class="alert-icon" aria-hidden="true">⚠️</span>
+       </div>
+      <p data-i18n="hero.subtitle">Découvrez la solution innovante qui élimine 99,99% des germes en moins de 2 minutes. Donnez votre avis pour nous aider à révolutionner l'hygiène dans les salles de sport !</p>
+      <a href="#form" class="cta-button" data-i18n="hero.cta">Je donne mon avis</a>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="problem">
+    <div class="container">
+      <h2 class="section-title" data-i18n="problem.title">Le problème invisible</h2>
+      <div class="problem-content">
+        <div class="problem-text">
+          <h3 data-i18n="problem.h3">Votre gourde peut être jusqu'à 100 000 fois plus sale qu'un siège de toilette</h3>
+          <p data-i18n="problem.p1">Les environnements chauds et humides comme l'intérieur d'une gourde sont le terrain de jeu parfait pour les bactéries (E. coli, Staphylocoques, Pseudomonas), les moisissures et les levures.</p>
+
+          <div class="shocking-facts">
+            <div class="fact"><div class="fact-icon">⚠️</div><div data-i18n="problem.f1">+ de 300 000 UFC (Unités Formant Colonie) peuvent se développer sur un bouchon en 24h.</div></div>
+            <div class="fact"><div class="fact-icon">⚠️</div><div data-i18n="problem.f2">Une gourde mal nettoyée peut contenir plus de bactéries qu'un smartphone ou qu'une gamelle de chien.</div></div>
+            <div class="fact"><div class="fact-icon">⚠️</div><div data-i18n="problem.f3">Jusqu'à 99.99% des germes ne sont pas éliminés par un simple rinçage à l'eau.</div></div>
+          </div>
+
+          <p><strong data-i18n="problem.cons.title">Conséquences :</strong> <span data-i18n="problem.cons.body">Risques de maux de tête, maux de ventre, gastro-entérites, infections cutanées... Votre performance sportive et votre santé sont en jeu.</span></p>
+        </div>
+        <div class="problem-image">
+          <img src="images/Germes cachés.png" alt="Gourde remplie de bactéries" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="solution">
+    <div class="container">
+      <h2 class="section-title" data-i18n="solution.title">Notre solution révolutionnaire</h2>
+      <div class="solution-content">
+        <div class="solution-image">
+          <img src="images/Gourde machine.png" alt="Machine BlueKiosk dans une salle de sport"/>
+        </div>
+        <div class="solution-text">
+          <h3><span class="bluekiosk-name">BlueKiosk<span class="tech-part">.tech</span></span> : <span data-i18n="solution.tagline">Hygiene powered by clean tech</span></h3>
+          <p data-i18n="solution.p1">Notre machine de désinfection en libre-service <strong>éradique 99.99%</strong> des virus et bactéries de votre <strong>gourde et de son bouchon</strong>. Simple, rapide et efficace, elle s'intègre parfaitement dans votre routine sportive.</p>
+
+          <div class="benefits">
+            <div class="benefit"><div class="benefit-icon">🌡️</div><div data-i18n="solution.b1"><strong>Désinfection Professionnelle :</strong> Technologie brevetée, fiable et performante, conçue en conformité avec l'ensemble <mark>des normes et certifications</mark> réglementaires en vigueur</div></div>
+            <div class="benefit"><div class="benefit-icon">⚡</div><div data-i18n="solution.b2"><strong>Rapide et Efficace :</strong> Cycle complet en <mark>moins de 2 minutes</mark></div></div>
+            <div class="benefit"><div class="benefit-icon">♻️</div><div data-i18n="solution.b3"><strong>Écologique :</strong> Réduisez votre consommation de plastique en réutilisant votre gourde en toute sécurité</div></div>
+            <div class="benefit"><div class="benefit-icon">🤖</div><div data-i18n="solution.b4"><strong>Libre-Service :</strong> Interface intuitive, paiement sans contact disponible 24/7.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2 class="section-title" data-i18n="how.title">Comment ça marche ?</h2>
+      <div class="process-image">
+        <img src="images/Machine BlueKiosk.png" alt="Processus de désinfection BlueKiosk.tech" />
+        <div class="image-caption" data-i18n="how.caption">Notre technologie brevetée assure une désinfection complète en moins de 2 minutes</div>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="step-icon">1</div><h3 data-i18n="how.s1.t">Insérez</h3><p data-i18n="how.s1.p">Ouvrez le hublot et placez votre gourde et son bouchon à l'intérieur de la machine.</p></div>
+        <div class="step"><div class="step-icon">2</div><h3 data-i18n="how.s2.t">Lancez</h3><p data-i18n="how.s2.p">Sélectionnez le cycle sur l'écran tactile et validez le démarrage.</p></div>
+        <div class="step"><div class="step-icon">3</div><h3 data-i18n="how.s3.t">Récupérez</h3><p data-i18n="how.s3.p">En moins de 2 minutes, récupérez votre gourde parfaitement désinfectée, propre et sèche.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section id="form" class="form-section">
+    <div class="container">
+      <div class="form-container">
+        <h2 class="form-title" data-i18n="form.title">Aidez-nous à révolutionner l'hygiène sportive !</h2>
+        <p class="form-intro highlight-orange" data-i18n="form.intro">Votre avis est crucial pour finaliser notre prototype. Répondez à ce petit questionnaire de 3 minutes et participez à l'aventure BlueKiosk.tech !</p>
+
+        <form id="feedback-form">
+          <div class="form-group" id="frequency-group">
+            <label for="frequency" data-i18n="q.frequency.label">À quelle fréquence allez-vous à la salle de sport ? <span class="required">*</span></label>
+            <select id="frequency" name="frequency" required>
+              <option value="" data-i18n="select.placeholder">Sélectionnez une option</option>
+              <option value="less-than-once" data-i18n="q.frequency.less">Moins d'une fois par semaine</option>
+              <option value="1-2" data-i18n="q.frequency.1-2">1 à 2 fois par semaine</option>
+              <option value="3-4" data-i18n="q.frequency.3-4">3 à 4 fois par semaine</option>
+              <option value="5-plus" data-i18n="q.frequency.5+">5 fois ou plus par semaine</option>
+            </select>
+            <div class="error-message" id="frequency-error"></div>
+          </div>
+
+          <div class="form-group" id="bottle-type-group">
+            <label for="bottle-type" data-i18n="q.bottle.label">Quel type de gourde utilisez-vous ? <span class="required">*</span></label>
+            <select id="bottle-type" name="bottle-type" required>
+              <option value="" data-i18n="select.placeholder">Sélectionnez une option</option>
+              <option value="plastic" data-i18n="q.bottle.plastic">Plastique</option>
+              <option value="aluminum" data-i18n="q.bottle.aluminum">Aluminium/inox</option>
+              <option value="glass" data-i18n="q.bottle.glass">Verre</option>
+              <option value="ceramic" data-i18n="q.bottle.ceramic">Céramique</option>
+            </select>
+            <div class="error-message" id="bottle-type-error"></div>
+          </div>
+
+          <div class="form-group" id="cleaning-frequency-group">
+            <label for="cleaning-frequency" data-i18n="q.clean.label">À quelle fréquence nettoyez-vous votre gourde ? (Pas avec simplement de l'eau)<span class="required">*</span></label>
+            <select id="cleaning-frequency" name="cleaning-frequency" required>
+              <option value="" data-i18n="select.placeholder">Sélectionnez une option</option>
+              <option value="after-each-use" data-i18n="q.clean.after">Après chaque utilisation</option>
+              <option value="once-every-3-days" data-i18n="q.clean.3days">Une fois chaque 3 jours</option>
+              <option value="once-week" data-i18n="q.clean.week">Une fois par semaine</option>
+              <option value="rarely" data-i18n="q.clean.rarely">Rarement</option>
+              <option value="never" data-i18n="q.clean.never">Jamais</option>
+            </select>
+            <div class="error-message" id="cleaning-frequency-error"></div>
+          </div>
+
+          <div class="form-group" id="concern-group">
+            <label data-i18n="q.concern.label">Le manque d'hygiène des gourdes en salle de sport vous inquiète-t-il ? <span class="required">*</span></label>
+            <div class="radio-group">
+              <div class="radio-option"><input type="radio" id="concern-1" name="concern" value="1" required><label for="concern-1">1</label></div>
+              <div class="radio-option"><input type="radio" id="concern-2" name="concern" value="2"><label for="concern-2">2</label></div>
+              <div class="radio-option"><input type="radio" id="concern-3" name="concern" value="3"><label for="concern-3">3</label></div>
+              <div class="radio-option"><input type="radio" id="concern-4" name="concern" value="4"><label for="concern-4">4</label></div>
+              <div class="radio-option"><input type="radio" id="concern-5" name="concern" value="5"><label for="concern-5">5</label></div>
+            </div>
+            <div class="radio-scale-labels">
+              <span data-i18n="q.concern.low">Pas du tout</span>
+              <span data-i18n="q.concern.high">Extrêmement</span>
+            </div>
+            <div class="error-message" id="concern-error"></div>
+          </div>
+
+          <div class="form-group" id="willingness-group">
+            <label for="willingness" data-i18n="q.willing.label">Seriez-vous prêt à payer un petit fee pour ce service ? Un abonnement mensuel ou par utilisation <span class="required">*</span></label>
+            <select id="willingness" name="willingness" required>
+              <option value="" data-i18n="select.placeholder">Sélectionnez une option</option>
+              <option value="yes" data-i18n="q.willing.yes">Oui</option>
+              <option value="no" data-i18n="q.willing.no">Non</option>
+              <option value="maybe" data-i18n="q.willing.maybe">Pourquoi pas</option>
+            </select>
+            <div class="error-message" id="willingness-error"></div>
+          </div>
+
+          <div class="form-group" id="prix-group">
+            <label for="prix" data-i18n="q.price.label">Choisissez le prix que vous voyez juste pour un abonnement mensuel ? <span class="required">*</span></label>
+            <select id="prix" name="prix" required>
+              <option value="" data-i18n="select.placeholder">Sélectionnez une option</option>
+              <option value="35" data-i18n="q.price.35">34.99$</option>
+              <option value="30" data-i18n="q.price.30">29.99$</option>
+              <option value="25" data-i18n="q.price.25">24.99$</option>
+              <option value="20" data-i18n="q.price.20">19.99$</option>
+            </select>
+            <div class="error-message" id="prix-error"></div>
+          </div>
+
+          <div class="form-group" id="location-group">
+            <label for="location" data-i18n="q.loc.label">Où aimeriez-vous trouver nos machines ? <span class="required">*</span></label>
+            <select id="location" name="location" required>
+              <option value="" data-i18n="select.placeholder">Sélectionnez une option</option>
+              <option value="locker" data-i18n="q.loc.locker">Près des vestiaires</option>
+              <option value="entrance" data-i18n="q.loc.entrance">À l'entrée</option>
+              <option value="cardio" data-i18n="q.loc.cardio">Dans la zone cardio</option>
+              <option value="water" data-i18n="q.loc.water">Près des fontaines à eau</option>
+            </select>
+            <div class="error-message" id="location-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" data-i18n="q.email.label">Souhaitez-vous suivre notre actualité ? Laissez-nous votre email (optionnel)</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com"/>
+            <div class="error-message" id="email-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="comments" data-i18n="q.comments.label">Avez-vous des commentaires ou des suggestions ?</label>
+            <textarea id="comments" name="comments" data-i18n-placeholder="q.comments.ph" placeholder="Vos idées nous intéressent..."></textarea>
+          </div>
+
+          <button type="submit" class="cta-button" data-i18n="form.submit">Envoyer mon avis</button>
+        </form>
+
+        <div class="success-message" id="success-message">
+          <div class="success-icon">✓</div>
+          <h3 data-i18n="form.success.title">Merci pour votre contribution précieuse !</h3>
+          <p data-i18n="form.success.desc">Votre avis a été transmis avec succès à notre équipe et nous aide à perfectionner notre solution.</p>
+          <div class="next-steps">
+            <p><strong data-i18n="form.success.next.title">Prochaines étapes :</strong></p>
+            <ul>
+              <li data-i18n="form.success.next.l1">Notre équipe analysera vos retours dans les plus brefs délais</li>
+              <li data-i18n="form.success.next.l2">Vous recevrez bientôt des nouvelles sur l'avancement du projet</li>
+              <li data-i18n="form.success.next.l3">Soyez parmi les premiers à tester notre solution de désinfection innovante</li>
+            </ul>
+          </div>
+          <p class="closing" data-i18n="form.success.closing">L'équipe BlueKiosk.tech vous remercie pour votre confiance.</p>
+        </div>
+
+        <div class="form-footer">
+          <p data-i18n="footer.privacy">Vos données sont confidentielles et utilisées uniquement pour améliorer notre produit. <a href="#">Politique de confidentialité</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>BlueKiosk.tech</h3>
+          <p data-i18n="footer.tagline">Révolutionnons l'hygiène sportive ensemble.</p>
+        </div>
+        <div class="footer-section">
+          <h3 data-i18n="footer.contact.title">Contact</h3>
+          <p>info@bluekiosk.tech</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">&copy; 2025 BlueKiosk.tech - Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
