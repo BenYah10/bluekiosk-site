@@ -178,9 +178,41 @@ const EMAILJS_CONFIG = {
   TEMPLATE_ID: "template_ytd4pg8"
 };
 
-// ---- Apps Script endpoint ----
-// ⚠️ METS ICI ton URL de déploiement /exec (Google Apps Script)
-const SHEET_ENDPOINT = "https://script.google.com/macros/s/TON_URL_EXEC/exec";
+// 1) Mets ici l'URL /exec de ton déploiement Apps Script
+const SHEET_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxesBmREwAxAlgq18QiAi7NvEdVEfGW2ltn8xCqxeEmyA35xG7h0n2oMjqGR1LWYZoU/exec';
+
+// 2) Construit l'objet avec EXACTEMENT les clés attendues par Code.gs
+function buildSheetParams(fd) {
+  return {
+    frequency:            fd.get('frequency') || '',
+    bottle_type:          fd.get('bottle_type') || '',
+    cleaning_frequency:   fd.get('cleaning_frequency') || '',
+    concern:              Number(fd.get('concern') || 0),
+    willingness:          fd.get('willingness') || '',
+    price:                fd.get('price') || '',
+    location:             fd.get('location') || '',
+    user_email:           fd.get('email') || '',
+    comments:             fd.get('comments') || ''
+  };
+}
+
+// 3) Envoi vers la Web App (non bloquant dans ton code)
+async function saveToSheet(payload) {
+  try {
+    const res = await fetch(SHEET_WEB_APP_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    // Optionnel: vérifier la réponse, logguer les erreurs côté client
+    if (!res.ok) {
+      console.warn('Sheet POST failed:', res.status, await res.text());
+    }
+  } catch (err) {
+    console.error('Sheet POST error:', err);
+  }
+}
+
 
 // ---- Highlight bouton langue ----
 function markActiveLang(lang){
