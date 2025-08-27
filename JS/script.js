@@ -179,7 +179,8 @@ const EMAILJS_CONFIG = {
 };
 
 // 1) Mets ici l'URL /exec de ton déploiement Apps Script
-const SHEET_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxzXRqitqhbltmxJXd6O8StVc4fCzqUmQMG6R4M4EInttia4jRl-ZSw-poII6-MGod0/exec';
+const SHEET_WEB_APP_URL = const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxXRqitqhbltmxJXd6O8StVc4fCzqUmQMG6R4M4Elnttia4jRl-ZSw-poll6-MGod0/exec";
+
 
 // 2) Construit l'objet avec EXACTEMENT les clés attendues par Code.gs
 function buildSheetParams(fd) {
