@@ -342,10 +342,10 @@ async function sendFeedbackEmail(formData) {
 
 // ---------- Sheets (non bloquant) ----------
 async function saveToSheet(payload) {
-  if (!SHEET_ENDPOINT || !/^https?:\/\//.test(SHEET_ENDPOINT)) return;
+  if (!SHEET_WEB_APP_UR || !/^https?:\/\//.test(SHEET_WEB_APP_UR)) return;
   try {
     // IMPORTANT : pas de Content-Type pour éviter preflight CORS
-    await fetch(SHEET_ENDPOINT, { method: "POST", body: JSON.stringify(payload) });
+    await fetch(SHEET_WEB_APP_UR, { method: "POST", body: JSON.stringify(payload) });
   } catch (err) {
     console.warn("Sheet POST failed (non bloquant):", err);
   }
