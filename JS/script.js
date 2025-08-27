@@ -204,12 +204,15 @@ async function saveToSheet(payload) {
       method: 'POST',
       body: JSON.stringify(payload)
     });
-    // Optionnel: vérifier la réponse, logguer les erreurs côté client
-    } catch (err) {
-    console.warn('Sheet POST failed (non bloquant):', err);
+    // si ton Apps Script renvoie { ok: true }, on peut tester :
+    let data = null;
+    try { data = await res.json(); } catch {}
+    return res.ok && (!data || data.ok !== false);
+  } catch (err) {
+    console.warn("Sheet POST failed:", err);
+    return false;
   }
 }
-
 // ---- Highlight bouton langue ----
 function markActiveLang(lang){
   const fr = document.getElementById("lang-fr");
