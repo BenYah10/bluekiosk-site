@@ -220,26 +220,32 @@ header {
 }
 
 /* ===== Alerte Hero (bandeau) ===== */
-.alert-banner{
-  position: relative;
-  width: 90%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+.alert-banner {
+  background: none;   /* pas de fond */
+  border: none;       /* pas de cadre */
+  box-shadow: none;   /* pas d'ombre */
+  padding: 0;
+}
 
-  padding: 14px 18px;
-  border-radius: 14px;
+/* Supprimer les rayures animées */
+.alert-banner::before {
+  display: none;
+}
 
-  /* palette “warning” douce */
-  background: linear-gradient(90deg, #eceaea 0%, #fcfbfb 100%);
-  border: 1px solid #e2dddd;
-  box-shadow: 0 12px 30px rgba(239,68,68,.18), inset 0 -1px 0 rgba(255,255,255,.6);
-  overflow: hidden;
+/* Texte en battement de cœur */
+.alert-text {
+  font-weight: 800;
+  color: #fff; /* blanc, mais tu peux changer */
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  animation: heartbeat 1.5s infinite;
+}
 
-  /* légère mise en avant */
-  transform: translateZ(0);
-  margin: 0 auto;
+/* Animation battement */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1.2); }
+  75% { transform: scale(1.1); }
 }
 
 .hero .alert-banner{ margin-bottom: 18px; }
@@ -1008,4 +1014,5 @@ footer {
     .container {
         padding: 0;
     }
+
 }
