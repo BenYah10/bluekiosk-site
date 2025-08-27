@@ -179,7 +179,7 @@ const EMAILJS_CONFIG = {
 };
 
 // 1) Mets ici l'URL /exec de ton déploiement Apps Script
-const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxXRqitqhbltmxJXd6O8StVc4fCzqUmQMG6R4M4Elnttia4jRl-ZSw-poll6-MGod0/exec";
+const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw1J56pAEreUbolYiQ-hwPkTkOecxf0i15sRUpAX6aCBBC3TT2XpoYk2mnKQ1euJHiN/exec";
 
 
 // 2) Construit l'objet avec EXACTEMENT les clés attendues par Code.gs
