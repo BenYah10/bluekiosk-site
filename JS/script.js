@@ -185,15 +185,15 @@ const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxXRqitqhbltm
 // 2) Construit l'objet avec EXACTEMENT les clés attendues par Code.gs
 function buildSheetParams(fd) {
   return {
-    frequency:            fd.get('frequency') || '',
-    bottle_type:          fd.get('bottle_type') || '',
-    cleaning_frequency:   fd.get('cleaning_frequency') || '',
-    concern:              Number(fd.get('concern') || 0),
-    willingness:          fd.get('willingness') || '',
-    price:                fd.get('price') || '',
-    location:             fd.get('location') || '',
-    user_email:           fd.get('email') || '',
-    comments:             fd.get('comments') || ''
+    frequency:           getFrequencyLabel(fd.get("frequency")),
+    bottle_type:         getBottleTypeLabel(fd.get("bottle-type")),
+    cleaning_frequency:  getCleaningFrequencyLabel(fd.get("cleaning-frequency")),
+    concern:             fd.get("concern") ? Number(fd.get("concern")) : "",
+    willingness:         ({ yes:3, maybe:2, no:1 }[fd.get("willingness")] ?? ""),
+    price:               getPriceLabel(fd.get("prix")),
+    location:            getLocationLabel(fd.get("location")),
+    user_email:          fd.get("email") || "Non fourni",
+    comments:            fd.get("comments") || ""
   };
 }
 
