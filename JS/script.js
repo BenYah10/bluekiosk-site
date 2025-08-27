@@ -205,14 +205,10 @@ async function saveToSheet(payload) {
       body: JSON.stringify(payload)
     });
     // Optionnel: vérifier la réponse, logguer les erreurs côté client
-    if (!res.ok) {
-      console.warn('Sheet POST failed:', res.status, await res.text());
-    }
-  } catch (err) {
-    console.error('Sheet POST error:', err);
+    } catch (err) {
+    console.warn('Sheet POST failed (non bloquant):', err);
   }
 }
-
 
 // ---- Highlight bouton langue ----
 function markActiveLang(lang){
