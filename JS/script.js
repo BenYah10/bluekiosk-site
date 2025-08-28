@@ -76,7 +76,7 @@ const I18N = {
     "form.success.next.l1": "Notre équipe analysera vos retours dans les plus brefs délais",
     "form.success.next.l2": "Vous recevrez bientôt des nouvelles sur l'avancement du projet",
     "form.success.next.l3": "Soyez parmi les premiers à tester notre solution de désinfection innovante",
-    "form.success.closing": "L'équipe BlueKiosk.tech vous remercie pour votre confiance."
+    "form.success.closing": "L'équipe BlueKiosk.tech vous remercie pour votre confiance.",
     "privacy.title": "Politique de confidentialité",
     "privacy.intro": "Votre vie privée est importante pour nous. Cette page explique quelles données nous collectons, pourquoi et comment elles sont utilisées.",
     "privacy.data.title": "Données collectées",
@@ -162,7 +162,7 @@ const I18N = {
     "form.success.next.l1": "Our team will analyze your feedback shortly",
     "form.success.next.l2": "You’ll soon get updates on the project",
     "form.success.next.l3": "Be among the first to test our innovative disinfection solution",
-    "form.success.closing": "The BlueKiosk.tech team thanks you for your trust."
+    "form.success.closing": "The BlueKiosk.tech team thanks you for your trust.",
     "privacy.title": "Privacy Policy",
     "privacy.intro": "Your privacy matters to us. This page explains what data we collect, why, and how it is used.",
     "privacy.data.title": "Data We Collect",
