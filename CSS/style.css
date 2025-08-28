@@ -678,6 +678,61 @@ header {
     color: var(--gray);
 }
 
+/* Bloc de l'échelle 1–5 */
+#concern-group {
+  position: relative;
+}
+
+/* Les boutons 1–5 centrés */
+#concern-group .radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Style des textes extrêmes (desktop par défaut) */
+#concern-group .radio-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;            /* petit espace sous les radios sur desktop */
+  font-size: 0.9em;
+  color: #6b7280;             /* gris doux, adapte si besoin */
+}
+
+/* Sur mobile : place "Pas du tout" AU-DESSUS et "Extrêmement" EN DESSOUS */
+@media (max-width: 600px) {
+  #concern-group {
+    padding-top: 20px;        /* place pour le label du haut */
+    padding-bottom: 20px;     /* place pour le label du bas */
+  }
+
+  #concern-group .radio-scale-labels {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;                /* pas de hauteur, on positionne les spans */
+    margin-top: 0;            /* on supprime le margin-top desktop */
+    pointer-events: none;     /* évite tout chevauchement cliquable */
+  }
+
+  #concern-group .radio-scale-labels span {
+    position: absolute;
+  }
+
+  /* "Pas du tout" en haut à gauche */
+  #concern-group .radio-scale-labels span:first-child {
+    top: -10px;
+    left: 0;
+  }
+
+  /* "Extrêmement" en bas à droite */
+  #concern-group .radio-scale-labels span:last-child {
+    bottom: -10px;
+    right: 0;
+  }
+}
+
+
 .error-message {
     color: var(--error);
     font-size: 0.85rem;
@@ -1046,6 +1101,7 @@ footer {
     }
 
 }
+
 
 
 
