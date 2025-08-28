@@ -77,6 +77,18 @@ const I18N = {
     "form.success.next.l2": "Vous recevrez bientôt des nouvelles sur l'avancement du projet",
     "form.success.next.l3": "Soyez parmi les premiers à tester notre solution de désinfection innovante",
     "form.success.closing": "L'équipe BlueKiosk.tech vous remercie pour votre confiance."
+    "privacy.title": "Politique de confidentialité",
+    "privacy.intro": "Votre vie privée est importante pour nous. Cette page explique quelles données nous collectons, pourquoi et comment elles sont utilisées.",
+    "privacy.data.title": "Données collectées",
+    "privacy.data.body": "Le formulaire peut inclure : fréquence, type de gourde, habitudes de nettoyage, localisation préférée, e-mail (optionnel) et commentaires.",
+    "privacy.usage.title": "Utilisation des données",
+    "privacy.usage.body": "Nous utilisons vos réponses pour améliorer le produit et, si vous l’avez accepté, pour vous contacter au sujet du projet.",
+    "privacy.storage.title": "Stockage et sécurité",
+    "privacy.storage.body": "Les données sont stockées de manière sécurisée sur Google Sheets (via Apps Script) et ne sont pas vendues à des tiers.",
+    "privacy.rights.title": "Vos droits",
+    "privacy.rights.body": "Contactez-nous à info@bluekiosk.tech pour demander la suppression ou l’export de vos données.",
+    "privacy.contact.title": "Contact",
+    "privacy.contact.body": "Pour toute question, écrivez à info@bluekiosk.tech.",
   },
   en: {
     "meta.title": "BlueKiosk.tech - Bottle disinfection solution",
@@ -151,6 +163,18 @@ const I18N = {
     "form.success.next.l2": "You’ll soon get updates on the project",
     "form.success.next.l3": "Be among the first to test our innovative disinfection solution",
     "form.success.closing": "The BlueKiosk.tech team thanks you for your trust."
+    "privacy.title": "Privacy Policy",
+    "privacy.intro": "Your privacy matters to us. This page explains what data we collect, why, and how it is used.",
+    "privacy.data.title": "Data We Collect",
+    "privacy.data.body": "The form may include: frequency, bottle type, cleaning habits, preferred location, email (optional), and comments.",
+    "privacy.usage.title": "How We Use Data",
+    "privacy.usage.body": "We use your answers to improve the product and, if you opted in, to contact you about the project.",
+    "privacy.storage.title": "Storage & Security",
+    "privacy.storage.body": "Data is stored securely in Google Sheets (via Apps Script) and is not sold to third parties.",
+    "privacy.rights.title": "Your Rights",
+    "privacy.rights.body": "Contact us at info@bluekiosk.tech to request deletion or export of your data.",
+    "privacy.contact.title": "Contact",
+    "privacy.contact.body": "For any question, write to info@bluekiosk.tech.",
   }
 };
 
