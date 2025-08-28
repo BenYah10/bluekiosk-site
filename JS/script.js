@@ -94,7 +94,7 @@ const I18N = {
 
     // Ajout pour la page Privacy Policy
     "privacy.title": "Politique de confidentialité",
-    "privacy.intro": "Chez <strong>BlueKiosk.tech</strong>, nous accordons une grande importance à la protection de vos données personnelles."
+    "privacy.intro": "Chez <strong>BlueKiosk.tech</strong>, nous accordons une grande importance à la protection de vos données personnelles.",
     "privacy.title": "Politique de confidentialité - BlueKiosk.tech",
 "privacy.h1": "Politique de confidentialité",
 "privacy.intro": "Chez <strong>BlueKiosk.tech</strong>, nous accordons une grande importance à la protection de vos données personnelles. Cette politique explique comment vos informations sont collectées, utilisées et protégées lorsque vous utilisez notre site et remplissez notre formulaire de feedback.",
@@ -218,7 +218,7 @@ const I18N = {
 
     // Ajout pour la page Privacy Policy
     "privacy.title": "Privacy Policy",
-    "privacy.intro": "At <strong>BlueKiosk.tech</strong>, we place great importance on protecting your personal data."
+    "privacy.intro": "At <strong>BlueKiosk.tech</strong>, we place great importance on protecting your personal data.",
   "privacy.title": "Privacy Policy - BlueKiosk.tech",
 "privacy.h1": "Privacy Policy",
 "privacy.intro": "At <strong>BlueKiosk.tech</strong>, we place great importance on protecting your personal data. This policy explains how your information is collected, used and protected when you use our site and fill in our feedback form.",
