@@ -233,20 +233,49 @@ header {
 }
 
 /* Texte en battement de cœur */
-.alert-text {
-  font-weight: 800;
-  color: #fff; /* blanc, mais tu peux changer */
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  animation: heartbeat 1.5s infinite;
+/* ====== RESET du bandeau : plus de fond, plus de bordures/ombres ====== */
+.alert-banner {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 auto 16px !important;
+  max-width: none !important;
+}
+.alert-banner::before {
+  content: none !important;
 }
 
-/* Animation battement */
+/* ====== Titre en blanc avec effet battement de cœur ====== */
+.alert-text {
+  display: block;
+  color: #fff !important;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: .2px;
+  font-size: clamp(22px, 5vw, 42px);
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);
+  animation: heartbeat 1.6s ease-in-out infinite;
+}
+
 @keyframes heartbeat {
   0%, 100% { transform: scale(1); }
-  25% { transform: scale(1.1); }
-  50% { transform: scale(1.2); }
-  75% { transform: scale(1.1); }
+  25%     { transform: scale(1.08); }
+  50%     { transform: scale(1.16); }
+  75%     { transform: scale(1.08); }
 }
+
+/* ====== Espace sous le header pour éviter le chevauchement ====== */
+.hero,
+.hero .hero-content {
+  padding-top: clamp(16px, 5vw, 56px);
+}
+
+/* (Option) si le header est fixed/sticky, assure qu'il passe au-dessus */
+header {
+  z-index: 10; /* pas de position ici si déjà gérée, sinon position: sticky; top: 0; */
+}
+
 
 .hero .alert-banner{ margin-bottom: 18px; }
 
@@ -1016,3 +1045,4 @@ footer {
     }
 
 }
+
