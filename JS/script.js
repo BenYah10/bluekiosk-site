@@ -89,6 +89,13 @@ const I18N = {
     "privacy.rights.body": "Contactez-nous à info@bluekiosk.tech pour demander la suppression ou l’export de vos données.",
     "privacy.contact.title": "Contact",
     "privacy.contact.body": "Pour toute question, écrivez à info@bluekiosk.tech.",
+    "footer.privacy": "Vos données sont confidentielles et utilisées uniquement pour améliorer notre produit.",
+    "footer.privacy.link": "Politique de confidentialité",
+
+    // Ajout pour la page Privacy Policy
+    "privacy.title": "Politique de confidentialité",
+    "privacy.intro": "Chez <strong>BlueKiosk.tech</strong>, nous accordons une grande importance à la protection de vos données personnelles."
+    
   },
   en: {
     "meta.title": "BlueKiosk.tech - Bottle disinfection solution",
@@ -175,6 +182,12 @@ const I18N = {
     "privacy.rights.body": "Contact us at info@bluekiosk.tech to request deletion or export of your data.",
     "privacy.contact.title": "Contact",
     "privacy.contact.body": "For any question, write to info@bluekiosk.tech.",
+    "footer.privacy": "Your data is confidential and used only to improve our product.",
+    "footer.privacy.link": "Privacy Policy",
+
+    // Ajout pour la page Privacy Policy
+    "privacy.title": "Privacy Policy",
+    "privacy.intro": "At <strong>BlueKiosk.tech</strong>, we place great importance on protecting your personal data."
   }
 };
 
