@@ -699,6 +699,24 @@ header {
   color: #6b7280;             /* gris doux, adapte si besoin */
 }
 
+.radio-scale .scale-label {
+  font-size: 0.9em;
+  color: #333;
+}
+
+.radio-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+}
+
 /* Sur mobile : place "Pas du tout" AU-DESSUS et "Extrêmement" EN DESSOUS */
 @media (max-width: 600px) {
   #concern-group {
@@ -1101,6 +1119,7 @@ footer {
     }
 
 }
+
 
 
 
