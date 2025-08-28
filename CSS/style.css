@@ -652,103 +652,79 @@ header {
     color: var(--secondary);
 }
 
-.radio-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
+/* ====== ÉCHELLE CONCERN (1–5) — SANS CHANGER LE HTML ====== */
 
-.radio-option {
-    text-align: center;
-    flex: 1;
-}
+/* Contexte propre au groupe "concern" */
+#concern-group { position: relative; }
 
-.radio-option label {
-    display: block;
-    font-weight: normal;
-    margin-top: 5px;
-    cursor: pointer;
-}
-
-.radio-scale-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
-    font-size: 0.8rem;
-    color: var(--gray);
-}
-
-/* Bloc de l'échelle 1–5 */
-#concern-group {
-  position: relative;
-}
-
-/* Les boutons 1–5 centrés */
+/* Centrer les 1–5 (desktop par défaut) */
 #concern-group .radio-group {
   display: flex;
   justify-content: center;
   gap: 12px;
 }
 
-/* Style des textes extrêmes (desktop par défaut) */
+/* Texte des extrémités (desktop) */
 #concern-group .radio-scale-labels {
   display: flex;
   justify-content: space-between;
-  margin-top: 6px;            /* petit espace sous les radios sur desktop */
-  font-size: 0.9em;
-  color: #6b7280;             /* gris doux, adapte si besoin */
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #6b7280;
 }
 
-.radio-scale .scale-label {
-  font-size: 0.9em;
-  color: #333;
-}
+/* --- MOBILE : placer les libellés au-dessus/au-dessous --- */
+@media (max-width: 767px) {
+  /* colonne 1–5 */
+  #concern-group .radio-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
 
-.radio-options {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.radio-options label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1em;
-}
-
-/* Sur mobile : place "Pas du tout" AU-DESSUS et "Extrêmement" EN DESSOUS */
-@media (max-width: 600px) {
+  /* on réserve de la place pour les 2 libellés */
   #concern-group {
-    padding-top: 20px;        /* place pour le label du haut */
-    padding-bottom: 20px;     /* place pour le label du bas */
+    padding-top: 22px;   /* place pour "Pas du tout" */
+    padding-bottom: 22px;/* place pour "Extrêmement" */
   }
 
+  /* on neutralise l'ancien layout vertical des labels
+     et on les positionne absolument dans le conteneur */
   #concern-group .radio-scale-labels {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 0;                /* pas de hauteur, on positionne les spans */
-    margin-top: 0;            /* on supprime le margin-top desktop */
-    pointer-events: none;     /* évite tout chevauchement cliquable */
+    position: static;         /* remet à zéro toute position héritée */
+    display: block !important;
+    margin-top: 0 !important;
+    height: 0;                /* on dessine avec les spans */
   }
-
+  /* on place les spans individuellement */
   #concern-group .radio-scale-labels span {
     position: absolute;
-  }
-
-  /* "Pas du tout" en haut à gauche */
-  #concern-group .radio-scale-labels span:first-child {
-    top: -10px;
+    font-size: 0.85rem;
+    color: #6b7280;
     left: 0;
-  }
-
-  /* "Extrêmement" en bas à droite */
-  #concern-group .radio-scale-labels span:last-child {
-    bottom: -10px;
     right: 0;
+    text-align: left;         /* "Pas du tout" à gauche */
+    pointer-events: none;     /* évite tout recouvrement cliquable */
+  }
+  /* "Pas du tout" en haut */
+  #concern-group .radio-scale-labels span:first-child {
+    top: -4px;
+    left: 0;
+    text-align: left;
+  }
+  /* "Extrêmement" en bas (aligné à droite) */
+  #concern-group .radio-scale-labels span:last-child {
+    bottom: -4px;
+    right: 0;
+    text-align: right;
   }
 }
+
+/* (Option) petit ajustement de clic sur les radios */
+#concern-group .radio-option input[type="radio"] {
+  transform: translateY(-1px);
+}
+
 
 
 .error-message {
@@ -1119,6 +1095,7 @@ footer {
     }
 
 }
+
 
 
 
