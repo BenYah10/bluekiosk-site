@@ -1,101 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Politique de confidentialité - BlueKiosk.tech</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/style.css">
-  
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="privacy.title">Privacy Policy - BlueKiosk.tech</title>
+  <link rel="stylesheet" href="CSS/style.css" />
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      padding: 20px;
-      background-color: #f9f9f9;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #0056b3;
-    }
-    a {
-      color: #ff6600;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    body{font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:#f7fafc;color:#1f2937;margin:0}
+    .container{max-width:900px;margin:24px auto;padding:24px;background:#fff;
+      border-radius:12px;box-shadow:0 8px 20px rgba(3,7,18,.06)}
+    h1{font-size:28px;margin:0 0 16px;color:#0b63c6}
+    h2{font-size:20px;margin:24px 0 8px;color:#0b63c6}
+    a{color:#ff6600}
+    .lang-switch{display:flex;gap:8px;justify-content:flex-end;margin:0 0 8px}
+    .lang-switch button{padding:6px 10px;border:1px solid #e5e7eb;border-radius:8px;background:#fff;cursor:pointer}
+    .lang-switch button.is-active{background:#0b63c6;color:#fff;border-color:#0b63c6}
   </style>
 </head>
 <body>
   <div class="container">
-    <h1 data-i18n="privacy.title">Politique de confidentialité</h1>
-<p data-i18n="privacy.intro">
-  Chez <strong>BlueKiosk.tech</strong>, nous accordons une grande importance à la protection de vos données personnelles.
-</p> 
-    Cette politique explique comment vos informations sont collectées, utilisées et protégées lorsque vous utilisez notre site et remplissez notre formulaire de feedback.</p>
 
-    <h2>1. Responsable du traitement</h2>
-    <p>Le responsable du traitement des données est :<br>
-    <strong>BlueKiosk.tech</strong><br>
-    Email : <a href="mailto:admin@bluekiosk.tech">admin@bluekiosk.tech</a></p>
+    <!-- (option) mini switch langue -->
+    <div class="lang-switch">
+      <button id="lang-fr" type="button">FR</button>
+      <button id="lang-en" type="button">EN</button>
+    </div>
 
-    <h2>2. Données collectées</h2>
-    <p>Nous collectons uniquement les données que vous nous fournissez volontairement :</p>
+    <h1 data-i18n="privacy.h1">Privacy Policy</h1>
+
+    <p data-i18n="privacy.intro">
+      At <strong>BlueKiosk.tech</strong>, we place great importance on protecting your personal data.
+    </p>
+
+    <h2 data-i18n="privacy.s1.title">1. Data Controller</h2>
+    <p data-i18n="privacy.s1.body">
+      The data controller is: <strong>BlueKiosk.tech</strong><br>
+      Email: <a href="mailto:admin@bluekiosk.tech">admin@bluekiosk.tech</a>
+    </p>
+
+    <h2 data-i18n="privacy.s2.title">2. Data We Collect</h2>
     <ul>
-      <li>Réponses au questionnaire (fréquence d’entraînement, type de gourde, préférences, etc.)</li>
-      <li>Commentaires et suggestions</li>
-      <li>Adresse email (optionnelle, si vous souhaitez recevoir des mises à jour)</li>
+      <li data-i18n="privacy.s2.li1">Survey responses (workout frequency, bottle type, preferences, etc.)</li>
+      <li data-i18n="privacy.s2.li2">Comments and suggestions</li>
+      <li data-i18n="privacy.s2.li3">Email address (optional)</li>
     </ul>
 
-    <h2>3. Finalités de la collecte</h2>
-    <p>Vos données sont utilisées uniquement pour :</p>
+    <h2 data-i18n="privacy.s3.title">3. Purpose of Collection</h2>
     <ul>
-      <li>Analyser les retours afin d’améliorer nos services et notre prototype</li>
-      <li>Vous tenir informé de l’évolution du projet (si vous laissez votre email)</li>
+      <li data-i18n="privacy.s3.li1">Analyze feedback to improve our services and prototype</li>
+      <li data-i18n="privacy.s3.li2">Send updates about the project (if you provide your email)</li>
     </ul>
 
-    <h2>4. Partage des données</h2>
-    <p>Vos données sont stockées de manière sécurisée dans <strong>Google Sheets</strong> (Google Workspace).  
-    Certaines informations peuvent transiter par <strong>EmailJS</strong> pour l’envoi de mails.  
-    Elles ne sont jamais revendues ni partagées à des tiers à des fins commerciales.</p>
+    <h2 data-i18n="privacy.s4.title">4. Data Sharing</h2>
+    <p data-i18n="privacy.s4.body">
+      Your data is stored securely in <strong>Google Sheets</strong> (Google Workspace). Some information
+      may pass through <strong>EmailJS</strong> for email sending. Data is never sold or shared with third
+      parties for commercial purposes.
+    </p>
 
-    <h2>5. Durée de conservation</h2>
-    <p>Vos données sont conservées pendant une durée maximale de <strong>2 ans</strong>, sauf demande de suppression anticipée de votre part.</p>
+    <h2 data-i18n="privacy.s5.title">5. Retention Period</h2>
+    <p data-i18n="privacy.s5.body">
+      We retain your data for a maximum of <strong>2 years</strong>, unless you request earlier deletion.
+    </p>
 
-    <h2>6. Vos droits</h2>
-    <p>Conformément à la <strong>RGPD (Europe)</strong> et à la <strong>LPRPDE (Canada)</strong>, vous disposez des droits suivants :</p>
+    <h2 data-i18n="privacy.s6.title">6. Your Rights</h2>
+    <p data-i18n="privacy.s6.body">
+      In accordance with the <strong>GDPR (EU)</strong> and <strong>PIPEDA (Canada)</strong>, you have the right to:
+    </p>
     <ul>
-      <li>Droit d’accès à vos données</li>
-      <li>Droit de rectification ou suppression</li>
-      <li>Droit de retirer votre consentement à tout moment</li>
+      <li data-i18n="privacy.s6.li1">Access your data</li>
+      <li data-i18n="privacy.s6.li2">Rectify or delete your data</li>
+      <li data-i18n="privacy.s6.li3">Withdraw your consent at any time</li>
     </ul>
-    <p>Pour exercer vos droits, contactez-nous à : <a href="mailto:admin@bluekiosk.tech">admin@bluekiosk.tech</a></p>
+    <p data-i18n="privacy.s6.contact">
+      To exercise your rights, contact us at: <a href="mailto:admin@bluekiosk.tech">admin@bluekiosk.tech</a>
+    </p>
 
-    <h2>7. Sécurité</h2>
-    <p>Nous mettons en place des mesures techniques et organisationnelles pour protéger vos données contre tout accès non autorisé, perte ou divulgation.</p>
+    <h2 data-i18n="privacy.s7.title">7. Security</h2>
+    <p data-i18n="privacy.s7.body">
+      We implement technical and organizational measures to protect your data from unauthorized access, loss or disclosure.
+    </p>
 
-    <h2>8. Cookies</h2>
-    <p>Notre site n’utilise actuellement pas de cookies de suivi marketing. Seuls des cookies essentiels au bon fonctionnement du site peuvent être utilisés.</p>
+    <h2 data-i18n="privacy.s8.title">8. Cookies</h2>
+    <p data-i18n="privacy.s8.body">
+      We currently do not use marketing tracking cookies. Only essential cookies required for the site to function may be used.
+    </p>
 
-    <h2>9. Modifications</h2>
-    <p>Nous nous réservons le droit de modifier la présente politique de confidentialité à tout moment. Toute mise à jour sera publiée sur cette page.</p>
+    <h2 data-i18n="privacy.s9.title">9. Changes</h2>
+    <p data-i18n="privacy.s9.body">
+      We reserve the right to modify this policy at any time. Updates will be published on this page.
+    </p>
 
-    <h2>10. Contact</h2>
-    <p>Si vous avez des questions concernant cette politique, contactez-nous à :  
-    <a href="mailto:admin@bluekiosk.tech">admin@bluekiosk.tech</a></p>
+    <h2 data-i18n="privacy.s10.title">10. Contact</h2>
+    <p data-i18n="privacy.s10.body">
+      If you have any questions about this policy, contact us at:
+      <a href="mailto:admin@bluekiosk.tech">admin@bluekiosk.tech</a>
+    </p>
   </div>
+
   <script src="JS/script.js"></script>
 </body>
 </html>
-
-
-
