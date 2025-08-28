@@ -192,7 +192,6 @@ header {
 /* Hero Section */
 .hero {
     padding: 120px 0 20px;
-    padding-top: 80px; /* décale le contenu sous le header */
     background: linear-gradient(rgba(0, 112, 192, 0.85), rgba(0, 90, 158, 0.85)), url('../images/10 gourdes de différents model v1.PNG');
     background-size: cover;
     background-position: center;
@@ -203,6 +202,7 @@ header {
 
 .hero-content {
     position: relative;
+    margin-top: 20px; /* optionnel : espace supplémentaire juste au titre */
     z-index: 2;
 }
 
@@ -1046,5 +1046,6 @@ footer {
     }
 
 }
+
 
 
