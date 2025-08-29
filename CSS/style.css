@@ -7,8 +7,6 @@
     --gray: #6C757D;
     --error: #e22;
     --success: #28a745;
-    --concern-top1: 55px;
-    --concern-top5: 170px;
 }
 
 /* Global Reset */
@@ -678,18 +676,17 @@ header {
 /* --- MOBILE : placer les libellés au-dessus/au-dessous --- */
 @media (max-width: 767px) {
   /* colonne 1–5 */
-  #concern-group .radio-scale-labels span:first-child {
-    top: var(--concern-top1);
-    left: 0;
-    text-align: left;
+  #concern-group .radio-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
   }
 
-  #concern-group .radio-scale-labels span:last-child {
-    top: var(--concern-top5);
-    right: 0;
-    text-align: right;
+  /* on réserve de la place pour les 2 libellés */
+  #concern-group {
+    padding-top: 22px;   /* place pour "Pas du tout" */
+    padding-bottom: 22px;/* place pour "Extrêmement" */
   }
-}
 
   /* on neutralise l'ancien layout vertical des labels
      et on les positionne absolument dans le conteneur */
@@ -1095,56 +1092,8 @@ footer {
         padding: 0;
     }
 
-    /* ===== Échelle 1–5 (mobile) : aligne "Pas du tout" et "Extrêmement" ===== */
-@media (max-width: 767px) {
-  /* On définit 2 variables : 
-     --start = position verticale du radio "1"
-     --step  = écart vertical (centre à centre) entre 2 radios
-     Ajuste ces 2 valeurs pour ton rendu exact. */
-  #concern-group {
-    --start: 86px;   /* ex: 86px aligne "Pas du tout" avec le 1 */
-    --step:  56px;   /* ex: 56px correspond à l'espacement entre 2 radios */
-    position: relative;
-  }
-
-  /* On laisse la colonne des radios verticale et centrée */
-  #concern-group .radio-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--step);
-  }
-
-  /* Le conteneur des deux libellés extrêmes devient une couche absolue */
-  #concern-group .radio-scale-labels {
-    position: absolute;
-    inset: 0;
-    margin: 0 !important;
-    height: auto;
-    pointer-events: none; /* ne gêne pas les clics sur les radios */
-  }
-
-  /* Styles communs aux 2 libellés */
-  #concern-group .radio-scale-labels span {
-    position: absolute;
-    left: 0;
-    right: 0;
-    font-size: 0.9rem;
-    color: #6b7280;
-  }
-
-  /* "Pas du tout" → aligné sur le 1 */
-  #concern-group .radio-scale-labels span:first-child {
-    top: var(--start);
-    text-align: left;
-  }
-
-  /* "Extrêmement" → aligné sur le 5 (1 + 4 * step) */
-  #concern-group .radio-scale-labels span:last-child {
-    top: calc(var(--start) + 4 * var(--step));
-    text-align: right;
-  }
 }
+
 
 
 
