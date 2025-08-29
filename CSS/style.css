@@ -7,7 +7,7 @@
     --gray: #6C757D;
     --error: #e22;
     --success: #28a745;
-    --concern-top1: 34px;
+    --concern-top1: 55px;
     --concern-top5: 170px;
 }
 
@@ -678,17 +678,18 @@ header {
 /* --- MOBILE : placer les libellés au-dessus/au-dessous --- */
 @media (max-width: 767px) {
   /* colonne 1–5 */
-  #concern-group .radio-group {
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
+  #concern-group .radio-scale-labels span:first-child {
+    top: var(--concern-top1);
+    left: 0;
+    text-align: left;
   }
 
-  /* on réserve de la place pour les 2 libellés */
-  #concern-group {
-    padding-top: 22px;   /* place pour "Pas du tout" */
-    padding-bottom: 22px;/* place pour "Extrêmement" */
+  #concern-group .radio-scale-labels span:last-child {
+    top: var(--concern-top5);
+    right: 0;
+    text-align: right;
   }
+}
 
   /* on neutralise l'ancien layout vertical des labels
      et on les positionne absolument dans le conteneur */
@@ -1095,6 +1096,7 @@ footer {
     }
 
 }
+
 
 
 
