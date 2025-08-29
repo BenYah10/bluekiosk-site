@@ -7,6 +7,8 @@
     --gray: #6C757D;
     --error: #e22;
     --success: #28a745;
+    --concern-top1: 34px;
+    --concern-top5: 170px;
 }
 
 /* Global Reset */
@@ -654,18 +656,17 @@ header {
 
 /* ====== ÉCHELLE CONCERN (1–5) — SANS CHANGER LE HTML ====== */
 
-/* Contexte */
-#concern-group { 
-  position: relative; 
-}
+/* Contexte propre au groupe "concern" */
+#concern-group { position: relative; }
 
-/* Desktop : radios centrés + labels extrêmes sous la ligne */
+/* Centrer les 1–5 (desktop par défaut) */
 #concern-group .radio-group {
   display: flex;
   justify-content: center;
   gap: 12px;
 }
 
+/* Texte des extrémités (desktop) */
 #concern-group .radio-scale-labels {
   display: flex;
   justify-content: space-between;
@@ -674,43 +675,50 @@ header {
   color: #6b7280;
 }
 
-/* ---------- Mobile : colonne + labels alignés sur 1 et 5 ---------- */
+/* --- MOBILE : placer les libellés au-dessus/au-dessous --- */
 @media (max-width: 767px) {
-  /* Colonne 1→5 */
+  /* colonne 1–5 */
   #concern-group .radio-group {
     flex-direction: column;
     align-items: center;
     gap: 14px;
   }
 
-  /* Le conteneur des 2 libellés sert de repère pour les spans absolus */
-  #concern-group .radio-scale-labels {
-    position: relative;               /* IMPORTANT pour que les spans se placent correctement */
-    display: block !important;
-    margin: 0 !important;
-    height: 0;                        /* pas de hauteur, on dessine avec les spans */
-    pointer-events: none;             /* pas cliquable */
+  /* on réserve de la place pour les 2 libellés */
+  #concern-group {
+    padding-top: 22px;   /* place pour "Pas du tout" */
+    padding-bottom: 22px;/* place pour "Extrêmement" */
   }
 
-  /* Spans en absolu à l’intérieur du conteneur ci-dessus */
+  /* on neutralise l'ancien layout vertical des labels
+     et on les positionne absolument dans le conteneur */
+  #concern-group .radio-scale-labels {
+    position: static;         /* remet à zéro toute position héritée */
+    display: block !important;
+    margin-top: 0 !important;
+    height: 0;                /* on dessine avec les spans */
+  }
+  /* on place les spans individuellement */
   #concern-group .radio-scale-labels span {
     position: absolute;
     font-size: 0.85rem;
     color: #6b7280;
+    left: 0;
+    right: 0;
+    text-align: left;         /* "Pas du tout" à gauche */
+    pointer-events: none;     /* évite tout recouvrement cliquable */
   }
-
-  /* "Pas du tout" → aligné avec le 1 (à gauche) */
+  /* "Pas du tout" en haut */
   #concern-group .radio-scale-labels span:first-child {
+    top: -4px;
     left: 0;
     text-align: left;
-    top: var(--concern-top1, 34px);   /* ajuste si besoin */
   }
-
-  /* "Extrêmement" → aligné avec le 5 (à droite) */
+  /* "Extrêmement" en bas (aligné à droite) */
   #concern-group .radio-scale-labels span:last-child {
+    bottom: -4px;
     right: 0;
     text-align: right;
-    top: var(--concern-top5, 170px);  /* ajuste si besoin */
   }
 }
 
@@ -718,8 +726,6 @@ header {
 #concern-group .radio-option input[type="radio"] {
   transform: translateY(-1px);
 }
-
-
 
 .error-message {
     color: var(--error);
@@ -1089,6 +1095,7 @@ footer {
     }
 
 }
+
 
 
 
