@@ -150,7 +150,17 @@
       <h2 class="section-title" data-i18n="solution.title">Notre solution révolutionnaire</h2>
       <div class="solution-content">
         <div class="solution-image">
-          <img src="images/Gourde machine.png" alt="Machine BlueKiosk dans une salle de sport"/>
+          <!-- FR/EN switchable image -->
+          <img
+           id="gourde-img"
+           src="images/Gourde machine.png"
+           data-src-fr="images/Gourde machine.png"
+           data-src-en="images/Gourde-machine-en.png"
+           alt="Machine BlueKiosk dans une salle de sport"
+           data-alt-fr="Machine BlueKiosk dans une salle de sport"
+           data-alt-en="BlueKiosk machine in a gym"
+          />
+
         </div>
         <div class="solution-text">
           <h3><span class="bluekiosk-name">BlueKiosk<span class="tech-part">.tech</span></span> : <span data-i18n="solution.tagline">Hygiene powered by clean tech</span></h3>
@@ -348,6 +358,7 @@
   <script src="JS/script.js"></script>
 </body>
 </html>
+
 
 
 
