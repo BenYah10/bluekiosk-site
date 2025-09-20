@@ -267,7 +267,24 @@ function applyI18n(lang) {
   document.title = dict["meta.title"] || document.title;
   localStorage.setItem("lang", lang);
   currentLang = lang;
+   // switch to en
+  swapLangAssets(lang);
 }
+
+// --- Images/alt sensibles à la langue ---
+function swapLangAssets(lang) {
+  // toutes les images déclarées avec data-src-fr / data-src-en
+  document.querySelectorAll('[data-src-fr]').forEach(el => {
+    const src = (lang === 'fr') ? el.dataset.srcFr : (el.dataset.srcEn || el.dataset.srcFr);
+    if (el.tagName === 'IMG') el.src = src;
+  });
+  // alt bilingue si fourni
+  document.querySelectorAll('[data-alt-fr]').forEach(el => {
+    const alt = (lang === 'fr') ? el.dataset.altFr : (el.dataset.altEn || el.dataset.altFr);
+    if (alt) el.alt = alt;
+  });
+}
+
 
 // ---- EmailJS (v3) ----
 const EMAILJS_CONFIG = {
