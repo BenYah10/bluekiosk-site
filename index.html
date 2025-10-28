@@ -7,7 +7,7 @@
   <!-- =================== SEO =================== -->
   <title>BlueKiosk.tech — Hygiène clean-tech | Machines de désinfection en libre-service</title>
   <meta name="description" content="BlueKiosk.tech développe des solutions d’hygiène clean-tech. Notre première machine en libre-service offre une désinfection rapide et écologique des gourdes — idéale pour les salles de sport — avec un déploiement prévu dans les bureaux, campus et cégeps." />
-  <link rel="canonical" href="https://benyah10.github.io/bluekiosk-site/">
+  <link rel="canonical" href="https://bluekiosk.tech/">
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0070C0" />
   <meta name="color-scheme" content="light dark" />
@@ -15,11 +15,11 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://benyah10.github.io/bluekiosk-site/" />
+  <meta property="og:url" content="https://bluekiosk.tech/" />
   <meta property="og:site_name" content="BlueKiosk" />
   <meta property="og:title" content="BlueKiosk — Hygiène clean-tech" />
   <meta property="og:description" content="Machines de désinfection en libre-service : d’abord les gourdes (gyms), puis bureaux, campus et cégeps. Rapide, simple, écologique." />
-  <meta property="og:image" content="https://benyah10.github.io/bluekiosk-site/images/Logo.png" />
+  <meta property="og:image" content="https://bluekiosk.tech/images/Logo.png" />
   <meta property="og:image:alt" content="Logo BlueKiosk" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:locale:alternate" content="en_US" />
@@ -43,25 +43,44 @@
   <link rel="stylesheet" href="CSS/style.css" />
 
   <!-- Données structurées (JSON-LD) -->
+  <!-- 1) Organization: remplace Product pour éviter l'erreur "offers/review/aggregateRating" -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Machine de désinfection en libre-service",
-    "brand": { "@type": "Brand", "name": "BlueKiosk.tech" },
-    "description": "Hydratation plus saine : désinfection rapide et écologique des gourdes, pensée pour les gyms, bureaux et campus.",
-    "category": "Clean Tech / Hygiene",
+    "@type": "Organization",
+    "name": "BlueKiosk.tech",
     "url": "https://bluekiosk.tech/",
     "logo": "https://bluekiosk.tech/images/Logo.png",
-    "image": "https://bluekiosk.tech/images/Machine BlueKiosk.png",
-    "sameAs": ["https://www.instagram.com/bluekiosktech"],
-    "contactPoint": {
+    "sameAs": [
+      "https://www.instagram.com/bluekiosktech",
+      "https://www.facebook.com/bluekiosktech"
+    ],
+    "contactPoint": [{
       "@type": "ContactPoint",
       "telephone": "+1-438-223-7079",
       "contactType": "customer service",
       "areaServed": "CA",
-      "availableLanguage": ["French","English"]
-    }
+      "availableLanguage": ["fr","en"]
+    }]
+  }
+  </script>
+
+  <!-- 2) Service: décrit la prestation sans exiger d'offres/avis -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Désinfection de gourdes en libre-service",
+    "description": "Élimine 99,99 % des germes en moins de 2 minutes. Idéal pour les gyms, bureaux et campus.",
+    "serviceType": "Hygiène / désinfection",
+    "provider": {
+      "@type": "Organization",
+      "name": "BlueKiosk.tech",
+      "url": "https://bluekiosk.tech/"
+    },
+    "areaServed": "CA",
+    "url": "https://bluekiosk.tech/",
+    "image": "https://bluekiosk.tech/images/Machine%20BlueKiosk.png"
   }
   </script>
 
@@ -137,7 +156,7 @@
           <p><strong data-i18n="problem.cons.title">Conséquences :</strong> <span data-i18n="problem.cons.body">Risques de maux de tête, maux de ventre, gastro-entérites, infections cutanées... Votre performance sportive et votre santé sont en jeu.</span></p>
         </div>
         <div class="problem-image">
-          <img src="images/Germes cachés.png" alt="Gourde remplie de bactéries" />
+          <img src="images/Germes%20cach%C3%A9s.png" alt="Gourde remplie de bactéries" />
         </div>
       </div>
     </div>
@@ -152,14 +171,13 @@
           <!-- FR/EN switchable image -->
           <img
            id="gourde-img"
-           src="images/Gourde machine.png"
-           data-src-fr="images/Gourde machine.png"
+           src="images/Gourde%20machine.png"
+           data-src-fr="images/Gourde%20machine.png"
            data-src-en="images/Gourde-machine-en.png"
            alt="Machine BlueKiosk dans une salle de sport"
            data-alt-fr="Machine BlueKiosk dans une salle de sport"
            data-alt-en="BlueKiosk machine in a gym"
           />
-
         </div>
         <div class="solution-text">
           <h3><span class="bluekiosk-name">BlueKiosk<span class="tech-part">.tech</span></span> : <span data-i18n="solution.tagline">Hygiene powered by clean tech</span></h3>
@@ -181,7 +199,7 @@
     <div class="container">
       <h2 class="section-title" data-i18n="how.title">Comment ça marche ?</h2>
       <div class="process-image">
-        <img src="images/Machine BlueKiosk.png" alt="Processus de désinfection BlueKiosk.tech" />
+        <img src="images/Machine%20BlueKiosk.png" alt="Processus de désinfection BlueKiosk.tech" />
         <div class="image-caption" data-i18n="how.caption">Notre technologie brevetée assure une désinfection complète en moins de 2 minutes</div>
       </div>
       <div class="steps">
@@ -357,23 +375,3 @@
   <script src="JS/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
