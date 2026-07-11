@@ -36,6 +36,21 @@ Building the next generation of self-service bottle sanitization.
 
 ---
 
+---
+
+## 🔗 BlueKiosk Ecosystem
+
+BlueKiosk is composed of multiple complementary platforms, each serving a specific purpose.
+
+| Repository | Role |
+|------------|------|
+| 🟦 **BlueKiosk.tech** | Product Experience & Customer Validation |
+| 🟧 **BlueKioskTech.ca** | Corporate Website |
+| 🟩 **BlueKiosk Blog** | Educational Content & Awareness |
+| 🟪 **BlueKiosk Ecosystem** *(coming soon)* | Project Hub |
+
+Together, these repositories document the evolution of BlueKiosk from concept to commercialization.
+
 # About
 
 BlueKiosk.tech is developing an innovative **self-service bottle sanitization kiosk** designed to make reusable bottle hygiene simple, fast and accessible.
