@@ -1,3 +1,16 @@
+```text
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BLUEKIOSK ECOSYSTEM
+
+🟦 Product Experience
+
+Customer Validation Platform
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+
 <p align="center">
   <img src="images/Logo.png" alt="BlueKiosk.tech Logo" width="180">
 </p>
