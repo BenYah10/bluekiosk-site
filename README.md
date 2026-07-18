@@ -191,7 +191,7 @@ Our ambition is to become the reference for self-service bottle sanitization in 
 
 # Project Website
 
-🌐 https://bluekiosk.tech
+🌐 https://bluekiosk-site-git-main-ben-yahmed-mohameds-projects.vercel.app
 
 ---
 
