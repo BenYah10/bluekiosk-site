@@ -305,6 +305,7 @@ const EMAILJS_CONFIG = {
   USER_ID: "jnT9c-PBRcviLFLwY",
   SERVICE_ID: "service_uez93g9",
   TEMPLATE_ID: "template_ytd4pg8"
+  CONFIRMATION_TEMPLATE_ID: "template_fsuoelr"
 };
 
 // 1) URL /exec de votre déploiement Apps Script
