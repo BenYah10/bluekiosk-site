@@ -400,7 +400,17 @@ function buildTemplateParams(fd) {
 }
 function buildConfirmationParams(fd) {
   const recipientEmail = String(fd.get("email") || "").trim();
+  const now = new Date();
 
+const confirmationReference =
+  "BK-" +
+  now.getFullYear() +
+  String(now.getMonth() + 1).padStart(2, "0") +
+  String(now.getDate()).padStart(2, "0") +
+  "-" +
+  String(now.getHours()).padStart(2, "0") +
+  String(now.getMinutes()).padStart(2, "0") +
+  String(now.getSeconds()).padStart(2, "0");
   if (!recipientEmail || !validateEmail(recipientEmail)) {
     return null;
   }
@@ -412,7 +422,7 @@ function buildConfirmationParams(fd) {
         "Merci pour votre participation — BlueKioskTech",
 
       confirmation_title:
-        "Merci pour votre précieuse participation !",
+        `Merci pour votre participation — BlueKioskTech — ${confirmationReference}`,
 
       confirmation_greeting:
         "Bonjour,",
@@ -446,7 +456,7 @@ function buildConfirmationParams(fd) {
   return {
     recipient_email: recipientEmail,
     confirmation_subject:
-      "Thank you for your participation — BlueKioskTech",
+      `Thank you for your participation — BlueKioskTech — ${confirmationReference}`,
 
     confirmation_title:
       "Thank you for your valuable participation!",
