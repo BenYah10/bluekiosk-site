@@ -419,10 +419,10 @@ const confirmationReference =
     return {
       recipient_email: recipientEmail,
       confirmation_subject:
-        "Merci pour votre participation — BlueKioskTech",
+        `Merci pour votre participation — BlueKioskTech — ${confirmationReference}`,
 
       confirmation_title:
-        `Merci pour votre participation — BlueKioskTech — ${confirmationReference}`,
+        "Merci pour votre précieuse participation !",
 
       confirmation_greeting:
         "Bonjour,",
