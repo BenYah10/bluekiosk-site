@@ -672,9 +672,11 @@ document.addEventListener("DOMContentLoaded", () => {
       // Email (attendu)
       const emailOk = await sendFeedbackEmail(fd);
       
-      if (emailOk.success) {
-        const confirmationResult = await sendConfirmationEmail(fd);
-
+         if (emailOk.success) {
+       // EmailJS limite les envois à une requête par seconde.
+       // Cette pause évite que la confirmation soit refusée.
+         await new Promise(resolve => setTimeout(resolve, 1500));
+         const confirmationResult = await sendConfirmationEmail(fd);
         if (!confirmationResult.success) {
          console.warn("Participant confirmation was not sent.");
         }
