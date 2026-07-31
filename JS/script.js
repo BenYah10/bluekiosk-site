@@ -398,6 +398,87 @@ function buildTemplateParams(fd) {
     submission_date: new Date().toLocaleString(currentLang === "fr" ? "fr-FR" : "en-US")
   };
 }
+function buildConfirmationParams(fd) {
+  const recipientEmail = String(fd.get("email") || "").trim();
+
+  if (!recipientEmail || !validateEmail(recipientEmail)) {
+    return null;
+  }
+
+  if (currentLang === "fr") {
+    return {
+      recipient_email: recipientEmail,
+      confirmation_subject:
+        "Merci pour votre participation — BlueKioskTech",
+
+      confirmation_title:
+        "Merci pour votre précieuse participation !",
+
+      confirmation_greeting:
+        "Bonjour,",
+
+      confirmation_intro:
+        "Nous sommes ravis de votre participation au questionnaire BlueKioskTech.",
+
+      confirmation_analysis:
+        "Vos réponses contribueront directement à l’analyse des besoins et des attentes de nos futurs utilisateurs. Elles aideront notre équipe à améliorer la solution afin de proposer une expérience simple, accessible et adaptée au plus grand nombre.",
+
+      confirmation_commitment:
+        "Votre contribution nous rapproche de notre objectif : favoriser une meilleure hygiène des gourdes et contribuer à une routine quotidienne plus saine.",
+
+      confirmation_updates:
+        "Vous avez choisi de suivre notre actualité. Nous vous tiendrons informé(e) des prochaines étapes et de l’évolution du projet.",
+
+      confirmation_thanks:
+        "Nous vous remercions sincèrement pour le temps que vous nous avez accordé et pour votre contribution au développement de BlueKioskTech.",
+
+      confirmation_closing:
+        "Cordialement,",
+
+      confirmation_team:
+        "L’équipe BlueKioskTech",
+
+      confirmation_footer:
+        "Ce message confirme la réception de votre participation au questionnaire BlueKioskTech."
+    };
+  }
+
+  return {
+    recipient_email: recipientEmail,
+    confirmation_subject:
+      "Thank you for your participation — BlueKioskTech",
+
+    confirmation_title:
+      "Thank you for your valuable participation!",
+
+    confirmation_greeting:
+      "Hello,",
+
+    confirmation_intro:
+      "We are delighted that you participated in the BlueKioskTech survey.",
+
+    confirmation_analysis:
+      "Your answers will directly support our analysis of future users’ needs and expectations. They will help our team improve the solution and create an experience that is simple, accessible, and suitable for as many people as possible.",
+
+    confirmation_commitment:
+      "Your contribution brings us closer to our goal: promoting better bottle hygiene and supporting a healthier daily routine.",
+
+    confirmation_updates:
+      "You chose to follow our updates. We will keep you informed about the project’s progress and upcoming milestones.",
+
+    confirmation_thanks:
+      "Thank you sincerely for your time and for contributing to the development of BlueKioskTech.",
+
+    confirmation_closing:
+      "Best regards,",
+
+    confirmation_team:
+      "The BlueKioskTech Team",
+
+    confirmation_footer:
+      "This message confirms that we received your BlueKioskTech survey submission."
+  };
+}
 
 const willingnessScore = { yes:3, maybe:2, no:1 };
 function buildSheetParams(fd) {
