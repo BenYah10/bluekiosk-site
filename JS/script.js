@@ -671,9 +671,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Email (attendu)
       const emailOk = await sendFeedbackEmail(fd);
-
+      
       if (emailOk.success) {
-        if (successMessage) {
+        const confirmationResult = await sendConfirmationEmail(fd);
+
+        if (!confirmationResult.success) {
+         console.warn("Participant confirmation was not sent.");
+        }
+         if (successMessage) {
           successMessage.style.display = "block";
           successMessage.scrollIntoView({ behavior: "smooth" });
         } else {
