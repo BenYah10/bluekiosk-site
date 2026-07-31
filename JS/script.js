@@ -516,6 +516,56 @@ async function sendFeedbackEmail(formData) {
   }
 }
 
+async function sendConfirmationEmail(formData) {
+  const params = buildConfirmationParams(formData);
+
+  // Aucun email fourni : aucune confirmation à envoyer
+  if (!params) {
+    return {
+      success: true,
+      skipped: true
+    };
+  }
+
+  const initialized = initializeEmailJS();
+
+  if (!initialized) {
+    return {
+      success: false,
+      skipped: false
+    };
+  }
+
+  try {
+    Object.keys(params).forEach(key => {
+      if (params[key] == null) {
+        params[key] = "";
+      }
+
+      params[key] = String(params[key]);
+    });
+
+    const response = await emailjs.send(
+      EMAILJS_CONFIG.SERVICE_ID,
+      EMAILJS_CONFIG.CONFIRMATION_TEMPLATE_ID,
+      params
+    );
+
+    console.log("EmailJS confirmation:", response);
+
+    return {
+      success: true,
+      skipped: false
+    };
+  } catch (error) {
+    console.error("EmailJS confirmation error:", error);
+
+    return {
+      success: false,
+      skipped: false
+    };
+  }
+}
 // ---------- Sheets (non bloquant) ----------
 async function saveToSheet(payload) {
   if (!SHEET_WEB_APP_URL || !/^https?:\/\//.test(SHEET_WEB_APP_URL)) return;
