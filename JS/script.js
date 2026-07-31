@@ -382,7 +382,7 @@ function buildTemplateParams(fd) {
   return {
     to_email: "admin@bluekiosk.tech",
     reply_to: replyToEmail,
-    from_name: "BlueKiosk tech Team",
+    from_name: "BlueKioskTech Team",
     subject: (currentLang === "fr" ? "Nouvel Avis Client - " : "New Customer Feedback - ") +
              new Date().toLocaleDateString(currentLang === "fr" ? "fr-FR" : "en-US"),
     frequency: getFrequencyLabel(fd.get("frequency")),
