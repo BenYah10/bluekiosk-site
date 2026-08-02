@@ -212,4 +212,4 @@ Experience the project online:
 
 This repository is part of the BlueKiosk.tech project.
 
-© BlueKiosk.tech — All Rights Reserved.
+© BlueKioskTech. All Rights Reserved.
