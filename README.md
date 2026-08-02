@@ -1,7 +1,7 @@
 ```text
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-BLUEKIOSK ECOSYSTEM
+BLUEKIOSKTECH ECOSYSTEM
 
 🟦 Product Experience
 
@@ -38,16 +38,16 @@ Building the next generation of self-service bottle sanitization.
 
 ---
 
-## 🔗 BlueKiosk Ecosystem
+## 🔗 BlueKioskTech Ecosystem
 
-BlueKiosk is composed of multiple complementary platforms, each serving a specific purpose.
+BlueKioskTech is composed of multiple complementary platforms, each serving a specific purpose.
 
 | Repository | Role |
 |------------|------|
 | 🟦 **BlueKiosk.tech** | Product Experience & Customer Validation |
 | 🟧 **BlueKioskTech.ca** | Corporate Website |
 | 🟩 **BlueKiosk Blog** | Educational Content & Awareness |
-| 🟪 **BlueKiosk Ecosystem** *(coming soon)* | Project Hub |
+| 🟪 **BlueKioskTech Ecosystem** *(coming soon)* | Project Hub |
 
 Together, these repositories document the evolution of BlueKiosk from concept to commercialization.
 
@@ -61,19 +61,19 @@ By combining clean technology with an intuitive user experience, BlueKiosk aims 
 
 ---
 
-# Why BlueKiosk?
+# Why BlueKioskTech?
 
 Reusable bottles are becoming part of everyday life.
 
 However, many users unknowingly expose themselves to bacteria, mold and other microorganisms due to inadequate cleaning habits.
 
-BlueKiosk was created to solve this invisible hygiene challenge by providing an easy-to-use public sanitization solution that encourages healthier and more sustainable habits.
+BlueKioskTech was created to solve this invisible hygiene challenge by providing an easy-to-use public sanitization solution that encourages healthier and more sustainable habits.
 
 ---
 
 # Our Solution
 
-BlueKiosk is developing a smart self-service kiosk capable of sanitizing reusable bottles and their caps in just a few simple steps.
+BlueKioskTech is developing a smart self-service kiosk capable of sanitizing reusable bottles and their caps in just a few simple steps.
 
 ```
 Insert Bottle
@@ -181,7 +181,7 @@ BlueKiosk.tech/
 
 # Vision
 
-BlueKiosk is more than a product.
+BlueKioskTech is more than a product.
 
 It represents a new approach to public hygiene by combining sustainability, innovation and user experience into one simple and accessible solution.
 
@@ -191,21 +191,20 @@ Our ambition is to become the reference for self-service bottle sanitization in 
 
 # Project Website
 
+🌐 Live Demo
+
+Experience the project online:
 🌐 https://bluekiosk-site-git-main-ben-yahmed-mohameds-projects.vercel.app
 
 ---
 
 # Follow the Project
 
-- Website
-
-- GitHub
-
-- Instagram
-
-- Facebook
-
-- Blog
+- 🌐 Website
+- 💻 GitHub
+- 📸 Instagram
+- 👍 Facebook
+- 📰 Blog
 
 ---
 
