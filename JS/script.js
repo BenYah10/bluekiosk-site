@@ -31,6 +31,9 @@ const I18N = {
     "solution.b4": "<strong>Libre-Service :</strong> Interface intuitive, paiement sans contact disponible 24/7.",
 
     // How it works
+    "video.title": "Découvrez VUCS en vidéo",
+    "video.description": "Découvrez notre concept de désinfection des gourdes en libre-service.",
+    "video.note": "Vidéo conceptuelle à titre illustratif.",
     "how.title": "Comment ça marche ?",
     "how.caption": "Notre technologie brevetée assure une désinfection complète en moins de 2 minutes",
     "how.s1.t": "Insérez", "how.s1.p": "Ouvrez le hublot et placez votre gourde et son bouchon à l'intérieur de la machine.",
@@ -159,6 +162,9 @@ const I18N = {
     "solution.b4": "<strong>Self-service:</strong> Intuitive interface, contactless payment 24/7.",
 
     // How it works
+    "video.title": "Discover VUCS in action",
+    "video.description": "Discover our self-service water bottle disinfection concept.",
+    "video.note": "Concept video for illustrative purposes.",
     "how.title": "How does it work?",
     "how.caption": "Our patented technology ensures complete disinfection in under 2 minutes",
     "how.s1.t": "Insert", "how.s1.p": "Open the hatch and place your bottle and cap inside.",
@@ -632,6 +638,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("feedback-form");
   const successMessage = document.getElementById("success-message");
   if (!form) return;
+
+  // Vidéo VUCS : réafficher le poster à la fin de la lecture
+  const vucsVideo = document.getElementById("vucs-video-player");
+  if (vucsVideo) {
+    vucsVideo.addEventListener("ended", () => {
+      try {
+        vucsVideo.pause();
+        vucsVideo.currentTime = 0;
+        // Forcer le navigateur à réafficher l'image d'aperçu (poster).
+        vucsVideo.load();
+      } catch (error) {
+        console.warn("Unable to reset VUCS video to poster state.", error);
+      }
+    });
+  }
 
   // Cacher erreurs à la saisie
   form.querySelectorAll("select, input, textarea").forEach(el => {
