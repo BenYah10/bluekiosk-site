@@ -622,9 +622,8 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       menu.hidden ? openMenu() : closeMenu();
     }
-
-    btn.addEventListener("click", toggle, { passive:false });
-    btn.addEventListener("touchstart", toggle, { passive:false });
+    // Gestion unique du clic : souris, tactile et clavier
+    btn.addEventListener("click", toggle);
 
     document.addEventListener("click", (e)=>{
       if (!menu.hidden && !menu.contains(e.target) && e.target !== btn) closeMenu();
