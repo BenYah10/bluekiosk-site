@@ -431,3 +431,54 @@ footer{background:var(--dark);color:#fff;padding:35px 0;text-align:center}
   .form-section #concern-group .radio-option label,
   .form-section #feedback-form > .cta-button {transition: none;}
 }
+
+/* =========================================================
+   BlueKiosk.tech — Formulaire V2.1
+   Focus orange premium — FR / EN
+   ========================================================= */
+
+:root {
+  --bk-orange: #f97308;
+  --bk-orange-soft: #fff8f2;
+  --bk-orange-focus: rgba(249, 115, 8, 0.16);
+}
+
+/* Conteneur du champ actif */
+.form-section #feedback-form .form-group:focus-within {
+  background-color: #ffffff;
+  border-color: var(--bk-orange);
+  box-shadow: 0 0 0 3px var(--bk-orange-focus);
+}
+
+/* Champs au repos */
+.form-section #feedback-form .form-group > input,
+.form-section #feedback-form .form-group > select,
+.form-section #feedback-form .form-group > textarea {
+  background-color: #ffffff;
+}
+
+/* Champs actifs : bordure et fond orange léger */
+.form-section #feedback-form .form-group > input:focus,
+.form-section #feedback-form .form-group > select:focus,
+.form-section #feedback-form .form-group > textarea:focus {
+  background-color: var(--bk-orange-soft);
+  border-color: var(--bk-orange);
+  outline: 2px solid var(--bk-orange-focus);
+  outline-offset: 1px;
+  box-shadow: none;
+}
+
+/* Notation 1 à 5 : choix sélectionné */
+.form-section #concern-group .radio-option
+input[type="radio"]:checked + label {
+  background-color: var(--bk-orange);
+  border-color: var(--bk-orange);
+  color: #ffffff;
+}
+
+/* Accessibilité clavier */
+.form-section #concern-group .radio-option
+input[type="radio"]:focus-visible + label {
+  outline: 3px solid var(--bk-orange);
+  outline-offset: 3px;
+}
